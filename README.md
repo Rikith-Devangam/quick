@@ -1,65 +1,51 @@
-# Kanban Board App
+Kanban Board Application
+This is a Kanban board application built using ReactJS and styled using pure CSS. The application interacts with the provided API endpoint to display and group tickets dynamically based on user selection. The goal is to allow users to group and sort tickets in various ways, offering an interactive experience.
 
-## Overview
+Features
+Group Tickets:
 
-This project is a Kanban board application built using ReactJS. It allows users to interact with ticket data fetched from the [Quicksell API](https://api.quicksell.co/v1/internal/frontend-assignment). Users can group and sort tickets based on different criteria, making it a versatile tool for project management. See the project live at [Live Link](https://quicksell-frontend-shubh.netlify.app/).
+By Status: Group tickets based on their current status.
+By User: Group tickets based on the assigned user.
+By Priority: Group tickets based on their priority level.
+Sort Tickets:
 
-## Features
+By Priority: Sort tickets in descending order based on their priority.
+By Title: Sort tickets alphabetically by title.
+State Persistence:
 
-- **Data Interaction:**
+The user's current view state (grouping and sorting preferences) is saved locally and persists even after a page reload.
+Priority Levels:
 
-  - Fetches ticket data from the Quicksell API.
-  - Displays the fetched data on a Kanban board.
+Urgent (Priority level 4)
+High (Priority level 3)
+Medium (Priority level 2)
+Low (Priority level 1)
+No priority (Priority level 0)
+Usage
+Click the "Display" button to select a grouping option:
 
-- **Grouping Options:**
+By Status
+By User
+By Priority
+Once grouped, you can sort the tickets either:
 
-  - Group tickets by Status, User, or Priority.
+By Priority (descending)
+By Title (ascending)
+The current view (grouping and sorting) is saved automatically, so if you reload the page, your preferences will persist.
 
-- **Sorting Options:**
+API Integration
+The application communicates with the following API:
+API URL:
+https://api.quicksell.co/v1/internal/frontend-assignment
 
-  - Sort tickets by Priority or Title.
+The API returns ticket data, including ticket ID, title, user, status, and priority level. These tickets are displayed on the Kanban board and can be grouped or sorted as per user interaction.
 
-- **Priority Levels:**
+Priority Levels (From API)
+4: Urgent
+3: High
+2: Medium
+1: Low
+0: No priority
+Custom CSS
+This project uses pure CSS for styling to ensure flexibility and responsiveness. No external CSS libraries such as Bootstrap or Tailwind are used. The design is similar to the provided screenshots and is fully responsive.
 
-  - Tickets are categorized with priority levels ranging from Urgent (4) to No Priority (0).
-
-- **Styling:**
-
-  - Visually appealing and responsive design.
-  - Pure CSS is used for styling.
-
-- **Icons:**
-
-  - Icons are integrated for various elements of the application using react-icon.
-
-- **State Persistence:**
-  - Saves the user's view state (grouping and sorting options) even after a page reload using local storage.
-
-## Setup
-
-1. **Clone the Repository:**
-
-   ```bash
-   git clone https://github.com/Shubhankar-12/quicksell-frontend-assignment
-   ```
-
-2. **Navigate to the Project Directory:**
-
-   ```bash
-   cd kanban-board-app
-   ```
-
-3. **Install Dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-4. **Run the Application:**
-
-   ```bash
-   npm start
-   ```
-
-5. **Access the Application:**
-   Open your browser and go to `http://localhost:3000`.
